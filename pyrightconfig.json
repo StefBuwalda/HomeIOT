@@ -1,0 +1,9 @@
+{
+    "exclude": [
+        "migrations",
+        ".venv",
+        "pico_files",
+        "AT_frontend",
+        "OCR",
+    ]
+}
