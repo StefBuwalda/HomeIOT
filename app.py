@@ -1,4 +1,4 @@
-from application import app
+from application import app, mqtt_client
 from flask import render_template
 import random
 
@@ -11,4 +11,5 @@ def index():
 
 
 if __name__ == "__main__":
+    mqtt_client.loop_start()
     app.run()
