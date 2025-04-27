@@ -1,4 +1,5 @@
-from application import app, mqtt_client
+from application import app
+from mqtt_client import mqtt_client
 from flask import render_template
 import random
 import config as c
