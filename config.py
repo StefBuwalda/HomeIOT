@@ -1,0 +1,8 @@
+# MQTT Config
+MQTT_BROKER = "192.168.69.1"
+MQTT_PORT = 1883
+MQTT_TOPIC = "tele/vindriktning04/SENSOR"
+
+# Flask Config
+FLASK_PORT = 5000
+FLASK_HOST = "127.0.0.1"

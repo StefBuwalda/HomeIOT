@@ -1,6 +1,7 @@
 from application import app, mqtt_client
 from flask import render_template
 import random
+import config as c
 
 
 @app.route("/")
@@ -12,4 +13,4 @@ def index():
 
 if __name__ == "__main__":
     mqtt_client.loop_start()
-    app.run()
+    app.run(host=c.FLASK_HOST, port=c.FLASK_PORT)
