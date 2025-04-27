@@ -6,3 +6,6 @@ MQTT_TOPIC = "tele/vindriktning04/SENSOR"
 # Flask Config
 FLASK_PORT = 5000
 FLASK_HOST = "127.0.0.1"
+
+# SQL Alchemy
+SQLALCHEMY_DATABASE_URI = "sqlite:///app.db"

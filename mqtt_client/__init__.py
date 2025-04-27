@@ -1,5 +1,6 @@
 import paho.mqtt.client as mqtt
 import config as c
+from application import Test, db, app
 
 mqtt_client = mqtt.Client()
 
@@ -14,7 +15,9 @@ def on_connect(client, userdata, flags, rc):
 # Callback when a message is received
 def on_message(client, userdata, msg):
     print(f"Message received on topic {msg.topic}: {msg.payload.decode()}")
-
+    with app.app_context():
+        db.session.add(Test(data=msg.payload.decode()))  # type: ignore
+        db.session.commit()
     # Set up callbacks
 
 
